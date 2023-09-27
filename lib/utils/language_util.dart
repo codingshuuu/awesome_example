@@ -1,4 +1,3 @@
-import '../res/strings.dart';
 import 'package:awesome_base/awesome_base.dart';
 
 class LanguageUtil extends BaseLanguageUtil {
@@ -7,7 +6,7 @@ class LanguageUtil extends BaseLanguageUtil {
   ///填写支持的语言
   @override
   List<Language> getLanguages() => [
-        Language(Ids.languageEN, 'en', 'US'), //英语
-        Language(Ids.languageZH, 'zh', 'CN'), //中文
+        Language('Ids.languageEN', 'en', 'US'), //英语
+        Language('Ids.languageZH', 'zh', 'CN'), //中文
       ];
 }
