@@ -1,5 +1,4 @@
 import 'package:awesome_base/awesome_base.dart';
-// import 'package:example/api/http.dart';
 import 'package:example/routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ume/flutter_ume.dart';
@@ -7,7 +6,6 @@ import 'package:flutter_ume_kit_perf/flutter_ume_kit_perf.dart';
 import 'package:flutter_ume_kit_show_code/flutter_ume_kit_show_code.dart';
 import 'package:flutter_ume_kit_device/flutter_ume_kit_device.dart';
 import 'package:flutter_ume_kit_console/flutter_ume_kit_console.dart';
-// import 'package:flutter_ume_kit_dio/flutter_ume_kit_dio.dart';
 
 import 'provider_setup.dart';
 import 'res/colors.dart';
@@ -19,19 +17,12 @@ void main() {
     () async {
       if (BaseConfig.debug) {
         PluginManager.instance // Register plugin kits
-          // ..register(WidgetInfoInspector())
-          // ..register(WidgetDetailInspector())
-          // ..register(ColorSucker())
-          // ..register(AlignRuler())
-          // ..register(ColorPicker()) // New feature
-          // ..register(TouchIndicator()) // New feature
           ..register(Performance())
           ..register(ShowCode())
           ..register(MemoryInfoPage())
           ..register(CpuInfoPage())
           ..register(DeviceInfoPanel())
           ..register(Console());
-          // ..register(DioInspector(dio: Http.instance.dio)); // Pass in your Dio instance
         runApp(UMEWidget(child: MyApp(), enable: true));
       } else {
         runApp(MyApp());
